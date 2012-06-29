@@ -175,13 +175,34 @@
   	<java classname="com.bbtv.ui.text.KomMain">
   		<arg value="${budget}"/>
   		<arg value="${command.name}"/>
-  	    <arg value="${query}"/>
+      <arg value="${query}"/>
   		<arg value="${source.list}"/>
   		<arg value="${top.k}"/>
-        <classpath>
-          <pathelement location="${tagrec.classes.dir}"/>
+      <classpath>
+        <pathelement location="${tagrec.classes.dir}"/>
   		  <path refid="build.classpath"/>
   		</classpath>
   	</java>
+  </target>
+	
+  <target name="start_db" description="Starts the H2 database server">
+    <java classname="org.h2.tools.Server">
+      <arg value="-tcp"/>
+      <classpath>
+        <pathelement location="${tagrec.classes.dir}"/>
+        <path refid="build.classpath"/>
+      </classpath>
+    </java>   
+  </target>
+
+  <target name="stop_db" description="Starts the H2 database server">
+    <java classname="org.h2.tools.Server">
+      <arg value="-tcpShutdown"/>
+    	<arg value="${url}"/>
+      <classpath>
+        <pathelement location="${tagrec.classes.dir}"/>
+        <path refid="build.classpath"/>
+      </classpath>
+    </java>   
   </target>
 </project>
