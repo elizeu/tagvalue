@@ -29,6 +29,7 @@
   	<pathelement location="${gwt.sdk}/gwt-user.jar"/>
  	  <pathelement location="${http.client.lib}"/>
   	<pathelement location="${http.core.lib}"/>
+  	<pathelement location="${h2.lib}"/>
   	<pathelement location="${java.mail.lib}" />  	
   	<pathelement location="${junit.lib}"/>
   	<pathelement location="war/WEB-INF/classes"/>  	
@@ -47,6 +48,7 @@
   	<copy file="${gwt.sdk}/gwt-servlet.jar" todir="war/WEB-INF/lib"/>
   	<copy file="${http.client.lib}" todir="war/WEB-INF/lib"/>
     <copy file="${http.core.lib}" todir="war/WEB-INF/lib"/>
+  	<copy file="${h2.lib}" todir="war/WEB-INF/lib"/>
   	<copy file="${java.mail.lib}" todir="war/WEB-INF/lib"/>
   	
     <!-- <copy file="${lucene.core.lib}" todir="war/WEB-INF/lib"/> -->
