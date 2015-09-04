@@ -1,0 +1,1 @@
+The project contains the source code for the web application used to perform a user study to evaluate the value of tags (as perceived by users while searching content on social tagging system).
